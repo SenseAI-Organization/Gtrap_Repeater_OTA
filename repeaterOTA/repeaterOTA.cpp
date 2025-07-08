@@ -10,8 +10,8 @@ extern const char *Version_firmware;
  ** ************ DEFINES *******************************************************
  ** ****************************************************************************/
 // URLs to query new firmware version
-#define URL_FW_VER "https://raw.githubusercontent.com/SenseAI-Organization/Gtrap_RepeaterOTA/main/bin_version.txt"
-#define URL_FW_BIN "https://raw.githubusercontent.com/SenseAI-Organization/Gtrap_RepeaterOTA/main/firmware.bin"
+#define URL_FW_VER "https://raw.githubusercontent.com/SenseAI-Organization/Gtrap_Repeater_OTA/main/bin_version.txt"
+#define URL_FW_BIN "https://raw.githubusercontent.com/SenseAI-Organization/Gtrap_Repeater_OTA/main/firmware.bin"
 
 
 /** ****************************************************************************
@@ -73,7 +73,7 @@ int firmwareVersionCheck() {
     if (WiFi.status() != WL_CONNECTED) return -1;
     
     HTTPClient http;
-    http.begin("https://raw.githubusercontent.com/SenseAI-Organization/Gtrap_RepeaterOTA/main/bin_version.txt");
+    http.begin("https://raw.githubusercontent.com/SenseAI-Organization/Gtrap_Repeater_OTA/main/bin_version.txt");
     
     int httpCode = http.GET();
     if(httpCode != HTTP_CODE_OK) {
